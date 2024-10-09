@@ -1,0 +1,67 @@
+@keyframes type{
+    0%{
+        width: 100%;
+    }
+    50%{
+        width: 0%;
+    }
+    100%{
+        width:100%;
+    }
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    background-color: black;
+    /* z-index: -200; */
+
+}
+
+.container h1{
+    color: white;
+    font-size: 5vh;
+    position: relative;
+    padding: 0 1vw;
+}
+
+.container h1::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid white;
+    animation: type 3s ease;
+}
+
+/* .container h1::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid white;
+    animation: blink 0.5s ease;
+} */
+
+
+
